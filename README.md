@@ -2,9 +2,18 @@
 Aplicación sencilla de sockets con Python, para la materia de Sistemas Distribuidos de la UCAB
 
 ## Ejecución
-1. Clonar el repositorio: `git clone https://github.com/scriptom/mini-socket-logger`
-1. Ejecutar el servidor en una terminal: `python server.py --protocol=UDP`
-1. Ejecutar en otra terminal el cliente: `python client.py --protocol=UDP`
+1. Clonar el repositorio: 
+```shell
+git clone https://github.com/scriptom/mini-socket-logger
+```
+1. Ejecutar el servidor en una terminal: 
+```shell
+python server.py --protocol=UDP
+```
+1. Ejecutar en otra terminal el cliente: 
+```shell
+python client.py --protocol=UDP
+```
 1. En el cliente, autenticar usando alguno de los nombres que estén en el archivo `users.txt` usando el comando `helloiam`, Ej: `helloiam tomas`
 1. ¡Enviar mensajes! Para cerrar la conexión escriba `EXIT`.
 
