@@ -9,7 +9,7 @@ class AuthHandler(object):
     _users = []
 
     def __init__(self, users_file):
-        with open(users_file, 'r') as f:
+        with open(users_file, 'r', encoding='utf8') as f:
             self._users = f.read().splitlines()
 
     def user_exists(self, user: str) -> bool:
@@ -18,7 +18,7 @@ class AuthHandler(object):
     @classmethod
     def parse_username_from_message(cls, message: str) -> Optional[str]:
         if message.startswith(AUTH_TOKEN):
-            return message.split(' ')[1]
+            return message.split(' ', maxsplit=1)[1]
         return None
 
 
