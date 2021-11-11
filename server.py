@@ -59,6 +59,7 @@ class SocketWrapper(object):
                 self._respond_with(self.AUTH_COMPLETED_MESSAGE, address)
             else:
                 self._respond_with(self.AUTH_FAILED_MESSAGE, address)
+                self.log_message(f'Invalid user: {username}', address)
             return
 
         if message == self.EXIT_MESSAGE:
